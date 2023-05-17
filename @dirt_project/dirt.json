@@ -1,0 +1,11 @@
+{
+  "projectConfig": {
+    "projectName": "dirt_demo_react",
+    "frontend": "react",
+    "withStorybook": true,
+    "installPrettier": true,
+    "initializeGit": true,
+    "deploymentOption": "Vercel",
+    "verboseLogs": false
+  }
+}
