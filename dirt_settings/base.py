@@ -129,7 +129,7 @@ CSRF_HEADER_NAME = 'HTTP_X_XSRF_TOKEN'
 CSRF_COOKIE_NAME = 'XSRF-TOKEN'
 
 # Where ViteJS assets are built.
-DJANGO_VITE_ASSETS_PATH = BASE_DIR / 'dirt_react_fe' / 'dist'
+DJANGO_VITE_ASSETS_PATH = BASE_DIR / 'dirt_fe_react' / 'dist'
 
 # If we should use HMR or not.
 DJANGO_VITE_DEV_MODE = DEBUG
@@ -143,17 +143,15 @@ DJANGO_VITE_PORT = 3000
 # Include DJANGO_VITE_ASSETS_PATH into STATICFILES_DIRS to be copied inside
 # when run command python manage.py collectstatic
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
+    os.path.join(BASE_DIR, 'static'),
     DJANGO_VITE_ASSETS_PATH
 ]
 
-# Static files finders
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
-# static root
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 WSGI_APPLICATION = "dirt_demo_react.wsgi.application"
